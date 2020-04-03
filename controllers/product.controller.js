@@ -5,7 +5,7 @@ exports.test = function (req, res) {
     res.send('Greetings from the Test controller!');
 };
 
-exports.product_create = function (req, res) {
+exports.product_create = (req, res) => {
     let product = new Product(
         {
             name: req.body.name,
