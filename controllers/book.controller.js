@@ -5,7 +5,7 @@ exports.test = function(req,res)
     res.send('Greetings from the Books Test controller!');
 };
 
-exports.addBook = function(req,res)
+exports.addBook = (req,res) =>
 {
     let book = new Book(
         {
