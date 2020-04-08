@@ -8,10 +8,12 @@ const router = express.Router();
 const book_controller = require('../controllers/book.controller');
 
 // a simple test url to check that all of our files are communicating correctly.
-router.get('/test', book_controller.test);
-
 router.post('/create', book_controller.addBook);
 
-//router.post('/create')
+router.get('/:id', book_controller.bookDetails);
+
+router.put('/:id/update', book_controller.updateBook);
+
+router.delete('/:id/delete', book_controller.deleteBook)
 
 module.exports = router;
