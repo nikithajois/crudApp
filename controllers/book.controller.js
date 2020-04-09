@@ -41,7 +41,7 @@ exports.bookDetails = function (req, res) {
 
 
 exports.updateBook = function (req, res) {
-    Book.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
+    Book.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, book) {
         if (err) return next(err);
         res.send('Book udpated.');
     });
